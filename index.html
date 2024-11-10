@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaje de Información</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <section>
+        <div class="form-container-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="form-container">
+
+                <form id="miFormulario">
+                
+                    <label for="cuenta">Cuenta:</label>
+                    <input type="text" id="cuenta" name="cuenta" required placeholder="Ingresar nombre de la cuenta">
+
+                    <label for="contacto">Contacto:</label>
+                    <input type="text" id="contacto" name="contacto" required placeholder="Ingresar nombre y apellido">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="emial" required placeholder="Ingresar Email">
+
+                    <fieldset>
+                        <legend>Módulo donde se produce el error:</legend>
+                        <div class="checkbox-container">
+                        <label><input type="checkbox" name="opciones" value="SOS"> SOS</label>
+                        <label><input type="checkbox" name="opciones" value="Matriz"> Matriz</label>
+                        <label><input type="checkbox" name="opciones" value="LDI"> LDI</label>
+                        <label><input type="checkbox" name="opciones" value="LDI Plus"> LDI +</label>
+                        <label><input type="checkbox" name="opciones" value="KYC"> KYC</label>
+                        <label><input type="checkbox" name="opciones" value="CheckOne"> CheckOne</label>
+                        <label><input type="checkbox" name="opciones" value="API"> API</label>
+                        <label><input type="checkbox" name="opciones" value="SFTP"> SFTP</label>
+                        <label><input type="checkbox" name="opciones" value="Otros"> Otros</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>¿El error ha sido reproducido mas de una vez?</legend>
+                        <div class="checkbox-container">
+                        <label><input type="radio" name="error1" value="Si" required> Sí</label>
+                        <label><input type="radio" name="error1" value="No" required> No</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>¿El error ha sido reproducido con distintas credenciales?</legend>
+                        <div class="checkbox-container">
+                        <label><input type="radio" name="error2" value="Si" required> Sí</label>
+                        <label><input type="radio" name="error2" value="No" required> No</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>¿Es la primera vez que realiza la acción/pasos que han desencadenado el error?</legend>
+                        <div class="checkbox-container">
+                        <label><input type="radio" name="error3" value="Si" required> Si</label>
+                        <label><input type="radio" name="error3" value="No" required> No</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>¿Esta utilizando un suscriptor/usuario distinto?</legend>
+                        <div class="checkbox-container">
+                        <label><input type="radio" name="error4" value="Mismo usuario/suscriptor" required> El habitual</label>
+                        <label><input type="radio" name="error4" value="No, otro usuario/suscriptor" required> Un usuario distinto</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>¿El bug ha ocurrido siempre que realiza la accion o el mismo es esporádico?</legend>
+                        <div class="checkbox-container">
+                        <label><input type="radio" name="error5" value="Siempre pasa el mismo error" required> Siempre</label>
+                        <label><input type="radio" name="error5" value="Sucede de forma esporádica" required> Es esporádico</label>
+                    </fieldset>
+
+                    <!-- Comentarios -->
+                    <label for="comentario">Comentarios:</label>
+                    <textarea id="comentario" name="comentario" required placeholder="Descripcion del BUGS y pasos para reproducir"></textarea>
+
+                    <!-- Botón de guardado -->
+                    <button type="submit">Guardar y Descargar</button>
+
+                </form>
+                
+                <p id="resultado"></p>
+            </div>
+        </div>
+    </section>
+
+     <script src="script.js"></script>
+
+</body>
+</html>
